@@ -37,21 +37,8 @@ microservices](docs/img/architecture-diagram.png)](docs/img/architecture-diagram
 ## Prerequisites
 - Create Account on any Managed Kubernetes Cluster Provider (e.g. EKS, DigitalOcean, AWS, Azure, GKE, etc..). We will be using EKS as our managed kubernetes cluster provider.
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) in your local machine
-- Install [helm](https://helm.sh/docs/intro/install/) in your local machine
-- Install [helmfile](https://helmfile.readthedocs.io/en/latest/#installation) in your local machine
-
-## Deploying the micro-services using [Helm Charts](charts/) and [Helmfile](helmfile.yaml) into EKS Kubernetes Cluster
-
-Steps:
-1. Steps 1-5 will be same as above.
-2. Create [Helm Charts](charts/) and [Helmfile](helmfile.yaml).
-3. Deploy the Helm Charts using Helmfile:
-
-    helmfile sync -f online-shop-microservices/helmfile.yaml
-
-    ![Deployment of micro-services using helmfile](docs/img/deploy-using-helmfile.PNG)
-
-The log from helmfile sync command will be huge but it is good to go through it to understand what all services got deployed
+- Docker in your local machine
+- Kubernetes in your local machine
 
 The service can now be accessed using the any of the Node IP inside the cluster with the frontend service port number
 ![Check the webpage](docs/img/webpage-manifest.PNG)
